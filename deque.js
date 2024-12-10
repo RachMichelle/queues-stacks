@@ -24,6 +24,7 @@ class Deque {
             this.first = newNode;
             this.last = newNode;
         } else {
+            newNode.next = this.first;
             this.first.prev = newNode;
             this.first = newNode;
         }
@@ -38,6 +39,7 @@ class Deque {
             this.first = newNode;
             this.last = newNode;
         } else {
+            newNode.prev = this.last;
             this.last.next = newNode;
             this.last = newNode;
         }
